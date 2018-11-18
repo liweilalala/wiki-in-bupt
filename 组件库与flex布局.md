@@ -112,7 +112,7 @@ json文件写入以下代码
 这里我们需要读懂代码的含义了。首先在json文件的`usingComponents`属性中，我们定义了两个组件。分别是页面上部的导航栏和导航栏选项。然后我们在wxml中依照[官方文档](https://weapp.iviewui.com/components/tabs)的说明使用组件。最重要的就是理解js的部分
 这个tabs组件通过一个名为current的数据绑定来确定当前选中的标签。`bindchange="handleChange"`这个属性意为绑定一个名为`handleChange`的函数，用于处理tab切换事件。在js文件就需要有一个handleChange函数。事件处理函数都会有一个事件源对象传入，就是代码中的e。通过打印我们可以发现，点击不用的选项，e.detail.key中的值会有所不同，所以我们通过setData来设置current的属性值为e.detail.key，从而实现了从逻辑层到视图层的数据传递。
 效果图如下
-![效果图](./tab.png)
+![效果图](./tab.PNG)
 官方文档给我们提供了大量的实例，我们可以一一尝试，找到最适合页面的组件。
 
 #### 常见问题 ####
