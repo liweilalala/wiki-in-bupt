@@ -30,7 +30,7 @@
   - stretch：如果项目未设置高度或设为auto，将占满整个容器的高度。（默认值）
   同上面一样，元素在交叉轴上也应该有一个对齐方式，这个属性便是指定元素在交叉轴上的对齐方式的。
 #### 代码示例 ####
-  flex布局的具体用法如下，将父元素的`display`CSS属性设置为` flex`并添加`flex-direction`属性。 `flex-grow`属性添加给子元素。你还可以[预览flex布局的效果](https://user65536.github.io/wiki-in-bupt/flex.html)
+  flex布局的具体用法如下，将父元素的`display`CSS属性设置为` flex`并添加`flex-direction`属性。 `flex-grow`属性添加给子元素。你还可以[预览flex布局的效果](https://user65536.github.io/wiki-in-bupt/flex.html){:target="_blank"}
 ```
   .flex-column {
     width: 100px;
@@ -58,12 +58,12 @@
 ```
 
 #### 组件库 ####
-[iView Weapp](https://weapp.iviewui.com/docs/guide/start)是一个十分好用的小程序组件库。它将一些常用页面结构和样式封装好行程一个个组件，在使用时我们只需要写一个标签，就能实现一些复杂的功能。我们可以通过下面这个小程序预览组件的效果
+[iView Weapp](https://weapp.iviewui.com/docs/guide/start){:target="_blank"}是一个十分好用的小程序组件库。它将一些常用页面结构和样式封装好行程一个个组件，在使用时我们只需要写一个标签，就能实现一些复杂的功能。我们可以通过下面这个小程序预览组件的效果
 ![iView 小程序](./iView.jpg)
 
 #### 快速开始 ####
-[iView Weapp官方文档](https://weapp.iviewui.com/docs/guide/start)提供了快速开始的方案，我们在此基础上进行解读。
-作为一个外部文件，我们首先要将组件库引入。进入IView的[Github](https://github.com/TalkingData/iview-weapp)页面，找到下载按钮。如果使用git命令下载，则点击复制链接地址，然后再本地运行git clone 命令下载。如果对git操作还不是很熟悉的话，可以下载zip文件然后解压。
+[iView Weapp官方文档](https://weapp.iviewui.com/docs/guide/start){:target="_blank"}提供了快速开始的方案，我们在此基础上进行解读。
+作为一个外部文件，我们首先要将组件库引入。进入IView的[Github](https://github.com/TalkingData/iview-weapp){:target="_blank"}页面，找到下载按钮。如果使用git命令下载，则点击复制链接地址，然后再本地运行git clone 命令下载。如果对git操作还不是很熟悉的话，可以下载zip文件然后解压。
 ![gitgub](./git.png)
 下载好了之后，我们找到其中的`dist`文件夹，并将其复制到项目根目录下，就是`app.json`等文件所处的那个文件夹。在需要引用组件的页面的json文件里，我们添加这样一个属性
 ```
@@ -109,7 +109,7 @@ json文件写入以下代码
   }
 }
 ```
-这里我们需要读懂代码的含义了。首先在json文件的`usingComponents`属性中，我们定义了两个组件。分别是页面上部的导航栏和导航栏选项。然后我们在wxml中依照[官方文档](https://weapp.iviewui.com/components/tabs)的说明使用组件。最重要的就是理解js的部分
+这里我们需要读懂代码的含义了。首先在json文件的`usingComponents`属性中，我们定义了两个组件。分别是页面上部的导航栏和导航栏选项。然后我们在wxml中依照[官方文档](https://weapp.iviewui.com/components/tabs){:target="_blank"}的说明使用组件。最重要的就是理解js的部分
 这个tabs组件通过一个名为current的数据绑定来确定当前选中的标签。`bindchange="handleChange"`这个属性意为绑定一个名为`handleChange`的函数，用于处理tab切换事件。在js文件就需要有一个handleChange函数。事件处理函数都会有一个事件源对象传入，就是代码中的e。通过打印我们可以发现，点击不用的选项，e.detail.key中的值会有所不同，所以我们通过setData来设置current的属性值为e.detail.key，从而实现了从逻辑层到视图层的数据传递。
 效果图如下
 ![效果图](./tab.png)
